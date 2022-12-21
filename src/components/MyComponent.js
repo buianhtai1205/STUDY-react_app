@@ -12,20 +12,27 @@ class MyComponent extends React.Component {
 
     handleClick(event) {
         console.log("Click me");
-        console.log(event);
+        console.log(this.state.name);
+
+        this.setState({
+            name: "galaxyDEV",
+        });
     }
 
     handleMouseOver(event) {
-        console.log(event.pageX, event.pageY);
+        // console.log(event.pageX, event.pageY);
+        this.setState({
+            age: Math.floor(Math.random() * 100 + 1 ),
+        });
     }
 
     // JSX
     render() {
         return (
         <div>
-            My name is {this.state.name} and I'm from {this.state.address}
-            <button onClick={this.handleClick}>Click me</button>
-            <button onMouseOver={this.handleMouseOver}>Hover me</button>
+            My name is { this.state.name } and I'm { this.state.age }
+            <button onClick={ (event) => { this.handleClick(event) } }>Click me</button>
+            <button onMouseOver={ (event) => { this.handleMouseOver(event) } }>Hover me</button>
         </div>
         );
     }
