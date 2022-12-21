@@ -1,29 +1,37 @@
 import logo from "./logo.svg";
 import "./App.css";
 import MyComponent from "./components/MyComponent";
+import React from "react";
 
-function App() {
-  return (
-    <div>
-      Hello world Anh Tài
-      <MyComponent></MyComponent>
-    </div>
+class App extends React.Component {
 
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>Hello World! Anh Tài</p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-  );
+	render() {
+		return (
+			<div>
+				Hello world Anh Tài
+				<MyComponent></MyComponent>
+			</div>
+		);
+	}
 }
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>Hello World! Anh Tài</p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
 
 export default App;
