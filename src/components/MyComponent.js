@@ -3,7 +3,7 @@
 
 import React from "react";
 import DisplayInfo from "./DisplayInfo";
-import UserInfo from "./UserInfo"
+import AddUserInfo from "./AddUserInfo"
 
 class MyComponent extends React.Component {
     state = {
@@ -13,13 +13,22 @@ class MyComponent extends React.Component {
             { id: 3, name: "galaxyDEV", age: 30, }, 
         ],
     }
+
+    handleAddNewUser = (userObject) => {
+        console.log("Check Data: ", userObject);
+        this.setState({
+            listUsers: [...this.state.listUsers, userObject],
+        })
+    }
     
     // JSX
     render() {
 
         return (
             <div>
-                <UserInfo/>
+                <AddUserInfo
+                    handleAddNewUser = { this.handleAddNewUser }
+                />
                 <br />
                 <DisplayInfo 
                     listUsers = { this.state.listUsers }
