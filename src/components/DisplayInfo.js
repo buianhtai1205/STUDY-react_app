@@ -30,6 +30,7 @@ class DisplayInfo extends React.Component {
                                 <div key={ user.id } className={ user.age > 22 ? "green" : "red" }>
                                     <div>My name is { user.name }</div>
                                     <div>My age is { user.age }</div>
+                                    <button onClick={ () => this.props.handleDeleteUser(user.id) }>Delete</button>
                                     <hr />
                                 </div>
                             )
