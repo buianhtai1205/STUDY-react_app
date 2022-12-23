@@ -23,7 +23,7 @@ class DisplayInfo extends React.Component {
                     <span><u>{ this.state.isShowListUSers === true ? "Hide List Users" : "Show List Users" }</u></span>
                 </div>
                 { this.state.isShowListUSers && 
-                    <div>
+                    <>
                         { listUsers.map((user) => {
                             
                             return (
@@ -34,7 +34,7 @@ class DisplayInfo extends React.Component {
                                 </div>
                             )
                         })}
-                    </div>
+                    </>
                 }
             </div>
         );

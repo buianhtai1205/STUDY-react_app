@@ -31,7 +31,7 @@ class AddUserInfo extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="add-user-container">
                 My name is { this.state.name } and I'm { this.state.age }
                 <form onSubmit={ (event) => this.handleOnSubmitForm(event) }>
 
