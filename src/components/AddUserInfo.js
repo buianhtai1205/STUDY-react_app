@@ -57,18 +57,15 @@ import React, { useState } from "react";
 // }
 
 const AddUserInfo = (props) => {
-    console.log(props.handleAddNewUser);
 
     const [ name, setName ] = useState("");
     const [ age, setAge ] = useState();
 
     const handleOnChangeName = (event) => {
-        console.log(event.target.value);
         setName(event.target.value);
     }
 
     const handleOnChangeAge = (event) => {
-        console.log(event.target.value);
         setAge(event.target.value);
     }
 
