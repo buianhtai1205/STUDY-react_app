@@ -2,14 +2,17 @@ import logo from "./logo.svg";
 import "./App.scss";
 import MyComponent from "./components/MyComponent";
 import React from "react";
+import Counter from "./components/Counter";
+import RandomGift from "./components/RandomGift";
 
 class App extends React.Component {
 
 	render() {
 		return (
 			<div className="app-container">
-				Hello world Anh Tài
 				<MyComponent></MyComponent>
+				<Counter></Counter>
+				<RandomGift></RandomGift>
 			</div>
 		);
 	}
