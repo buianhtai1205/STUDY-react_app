@@ -5,6 +5,7 @@ import React from "react";
 import Counter from "./components/Counter";
 import RandomGift from "./components/RandomGift";
 import RegisterCourse from "./components/RegisterCourse";
+import ToDoList from "./components/ToDoList";
 
 class App extends React.Component {
 
@@ -15,6 +16,7 @@ class App extends React.Component {
 				<Counter></Counter>
 				<RandomGift></RandomGift>
 				<RegisterCourse></RegisterCourse>
+				<ToDoList></ToDoList>
 			</div>
 		);
 	}
