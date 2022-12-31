@@ -70,10 +70,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 # STUDY
-
+#useEffice
 1. useEffect(callback)
-- Gọi callback mỗi jhi component re-reder
-- GỌi sau khi component được thêm vào DOM - gọi sau render
+- Gọi callback mỗi khi component re-reder
+- Gọi sau khi component được thêm vào DOM - gọi sau render
 2. useEffect(callback, [])
 - Chỉ gọi callback 1 lần khi component mounted
 3. useEffect(callback, [deps])
