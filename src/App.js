@@ -13,12 +13,12 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="app-container">
+				<MountedAndUnmounted />
 				<MyComponent></MyComponent>
 				<Counter></Counter>
 				<RandomGift></RandomGift>
 				<RegisterCourse></RegisterCourse>
 				<ToDoList></ToDoList>
-				<MountedAndUnmounted />
 			</div>
 		);
 	}

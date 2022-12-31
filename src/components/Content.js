@@ -10,6 +10,7 @@ import { useEffect, useState } from "react"
 
 // ---------
 // 1. callback luôn được gọi sau khi component mounted
+// 2. Clean up function luôn đc gọi trước khi component unmounted
 
 const tabs = ['posts', 'comments', 'albums']
 
@@ -19,11 +20,13 @@ const Content = () => {
     const [comments, setComments] = useState([])
     const [albums, setAlbums] = useState([])
     const [choice, setChoice] = useState('posts')
-    
+    const [showGoToTop, setShowGoToTop] = useState(false)    
+    const [width, setWidth] = useState(window.innerWidth)
 
     useEffect(() => {
         document.title = title
-    })
+        console.log(">>call me")
+    }, [title])
 
     // useEffect(() => {
     //     // call API
@@ -51,9 +54,43 @@ const Content = () => {
 
     }, [choice])
 
+    useEffect(() => {
+
+        const handleScrollEvent = () => {
+            console.log(window.scrollY)
+            setShowGoToTop(window.scrollY >= 200)
+        }
+        
+        window.addEventListener('scroll', handleScrollEvent)
+        console.log('addEvent')
+
+        //clean up funtion
+        return () => {
+            console.log(">> unmounting")
+            window.removeEventListener('scroll', handleScrollEvent)
+            console.log('removeEvent')
+        }
+    }, [])
+
+    useEffect(() => {
+        const handleResizeEvent = () => {
+            setWidth(window.innerWidth)
+        }
+        window.addEventListener('resize', handleResizeEvent)
+
+        return () => {
+            window.removeEventListener('resize', handleResizeEvent)
+        }
+    })
+
+    const topFunction = () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
     return (
         <div>
-            <h1>Mounted & Unmounted</h1>
+            <h1>Mounted & Unmounted { width }</h1>
             { tabs.map(tab => (
                 <button 
                     key={ tab } 
@@ -81,6 +118,19 @@ const Content = () => {
                     <li key={ album.id }>{ album.title }</li>
                 ))}
             </ul>
+            { showGoToTop && (
+                <button
+                    style={{
+                        position: 'fixed',
+                        right: 20,
+                        bottom: 20,
+                        width: 50,  
+                        height: 50,
+                        borderRadius: '50%'
+                    }}
+                    onClick={ topFunction }
+                >Top</button>    
+            )}
         </div>    
     )
 }
