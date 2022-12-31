@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# STUDY
+
+1. useEffect(callback)
+- Gọi callback mỗi jhi component re-reder
+- GỌi sau khi component được thêm vào DOM - gọi sau render
+2. useEffect(callback, [])
+- Chỉ gọi callback 1 lần khi component mounted
+3. useEffect(callback, [deps])
+- Callback chỉ được gọi lại mỗi khi deps thay đổi
+---------
+1. callback luôn được gọi sau khi component mounted
+2. Clean up function luôn đc gọi trước khi component unmounted
+3. Clean up function luôn đc gọi trước khi callback được gọi trừ lần component mounted

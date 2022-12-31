@@ -11,6 +11,7 @@ import { useEffect, useState } from "react"
 // ---------
 // 1. callback luôn được gọi sau khi component mounted
 // 2. Clean up function luôn đc gọi trước khi component unmounted
+// 3. Clean up function luôn đc gọi trước khi callback được gọi trừ lần component mounted
 
 const tabs = ['posts', 'comments', 'albums']
 
