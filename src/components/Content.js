@@ -1,18 +1,5 @@
 import { useEffect, useState } from "react"
 
-// 1. useEffect(callback)
-// - Gọi callback mỗi jhi component re-reder
-// - GỌi sau khi component được thêm vào DOM - gọi sau render
-// 2. useEffect(callback, [])
-// - Chỉ gọi callback 1 lần khi component mounted
-// 3. useEffect(callback, [deps])
-// - Callback chỉ được gọi lại mỗi khi deps thay đổi
-
-// ---------
-// 1. callback luôn được gọi sau khi component mounted
-// 2. Clean up function luôn đc gọi trước khi component unmounted
-// 3. Clean up function luôn đc gọi trước khi callback được gọi trừ lần component mounted
-
 const tabs = ['posts', 'comments', 'albums']
 
 const Content = () => {

@@ -79,6 +79,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 3. useEffect(callback, [deps])
 - Callback chỉ được gọi lại mỗi khi deps thay đổi
 ---------
-1. callback luôn được gọi sau khi component mounted
+1. Callback luôn được gọi sau khi component mounted
 2. Clean up function luôn đc gọi trước khi component unmounted
 3. Clean up function luôn đc gọi trước khi callback được gọi trừ lần component mounted
+
+### useLayoutEffice
+
+* Tiến trình thực hiện của useEffect vs useLayoutEffect
+
+*** useEffect
+1. Cập nhật lại state
+2. Cập nhật lại DOM(mutated)
+3. Render UI
+4. Gọi clean up nếu deps thay đổi
+5. Gọi useEffect callback
+
+*** useLayoutEffect
+1. Cập nhật lại state
+2. Cập nhật lại DOM(mutated)
+3. Gọi clean up nếu deps thay đổi
+4. Gọi useEffect callback
+5. Render UI
