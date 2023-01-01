@@ -100,3 +100,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 3. Gọi clean up nếu deps thay đổi
 4. Gọi useEffect callback
 5. Render UI
+
+### useRef
+
+- Lưu các giá trị của một tham chiếu bên ngoài function component

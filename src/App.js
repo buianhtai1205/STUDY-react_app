@@ -7,6 +7,7 @@ import RandomGift from "./components/RandomGift";
 import RegisterCourse from "./components/RegisterCourse";
 import ToDoList from "./components/ToDoList";
 import MountedAndUnmounted from "./components/MountedAndUnmounted";
+import Clock from "./components/Clock";
 
 class App extends React.Component {
 
@@ -19,6 +20,7 @@ class App extends React.Component {
 				<RandomGift></RandomGift>
 				<RegisterCourse></RegisterCourse>
 				<ToDoList></ToDoList>
+				<Clock />
 			</div>
 		);
 	}
