@@ -9,12 +9,14 @@ import ToDoList from "./components/ToDoList";
 import MountedAndUnmounted from "./components/MountedAndUnmounted";
 import Clock from "./components/Clock";
 import AddProduct from "./components/AddProduct";
+import UpDown from "./components/UpDown";
 
 class App extends React.Component {
 
 	render() {
 		return (
 			<div className="app-container">
+				<UpDown />
 				<AddProduct />
 				<MountedAndUnmounted />
 				<MyComponent></MyComponent>

@@ -104,3 +104,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### useRef
 
 - Lưu các giá trị của một tham chiếu bên ngoài function component
+
+### useReducer
+
+* So sánh useState vs useReducer với bài toán Up/Down
+
+*** useState
+1. Init state: 0
+2. Actions: Up (state + 1) / Down (state - 1)
+
+*** useReducer
+1. Init state: 0
+2. Actions: Up (state + 1) / Down (state - 1)
+3. Reducer
+4. Dispatch
