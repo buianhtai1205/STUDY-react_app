@@ -8,12 +8,14 @@ import RegisterCourse from "./components/RegisterCourse";
 import ToDoList from "./components/ToDoList";
 import MountedAndUnmounted from "./components/MountedAndUnmounted";
 import Clock from "./components/Clock";
+import AddProduct from "./components/AddProduct";
 
 class App extends React.Component {
 
 	render() {
 		return (
 			<div className="app-container">
+				<AddProduct />
 				<MountedAndUnmounted />
 				<MyComponent></MyComponent>
 				<Counter></Counter>
