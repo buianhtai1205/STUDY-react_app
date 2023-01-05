@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import Content from "./Content";
-import { ThemeContextCreate } from "./ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
-const ThemeContext = () => {
-    const themeContext = useContext(ThemeContextCreate)
+const ContextStudy = () => {
+    const themeContext = useContext(ThemeContext)
     
     return (
         <div>
@@ -14,4 +14,4 @@ const ThemeContext = () => {
     )
 }
 
-export default ThemeContext;
+export default ContextStudy;

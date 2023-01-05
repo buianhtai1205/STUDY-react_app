@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const ThemeContextCreate = createContext()
+const ThemeContext = createContext()
 
 const ThemeProvider = ({children}) => {
     const [theme, setTheme] = useState('light')
@@ -19,10 +19,10 @@ const ThemeProvider = ({children}) => {
         handleSetTheme
     }
     return (
-        <ThemeContextCreate.Provider value={value}>
+        <ThemeContext.Provider value={value}>
             {children}
-        </ThemeContextCreate.Provider>
+        </ThemeContext.Provider>
     )
 }
 
-export {ThemeContextCreate, ThemeProvider} 
+export {ThemeContext, ThemeProvider} 
