@@ -11,11 +11,13 @@ import Clock from "./components/Clock";
 import AddProduct from "./components/AddProduct";
 import UpDown from "./components/UpDown";
 import ToDoWithReducer from "./components/ToDoWithReducer";
+import ThemeContext from "./components/Context";
 class App extends React.Component {
 
 	render() {
 		return (
 			<div className="app-container">
+				<ThemeContext />
 				<ToDoWithReducer />
 				<UpDown />
 				<AddProduct />

@@ -118,3 +118,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 2. Actions: Up (state + 1) / Down (state - 1)
 3. Reducer
 4. Dispatch
+
+### useContext vs Context
+
+1. Create context
+2. Provider
+3. Consumer
