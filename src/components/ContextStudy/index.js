@@ -1,10 +1,8 @@
+import { useTheme } from "../../store";
 import Content from "./Content";
-import { useStore, useTheme } from "../../store";
 
 const ContextStudy = () => {
     const themeContext = useTheme()
-    const [state, dispatch] = useStore()
-    console.log(state)
     
     return (
         <div>

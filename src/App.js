@@ -12,11 +12,13 @@ import AddProduct from "./components/AddProduct";
 import UpDown from "./components/UpDown";
 import ToDoWithReducer from "./components/ToDoWithReducer";
 import ContextStudy from "./components/ContextStudy";
+import PlayVideo from "./components/PlayVideo";
 class App extends React.Component {
 
 	render() {
 		return (
 			<div className="app-container">
+				<PlayVideo />
 				<ContextStudy />
 				<ToDoWithReducer />
 				<UpDown />
