@@ -13,11 +13,13 @@ import UpDown from "./components/UpDown";
 import ToDoWithReducer from "./components/ToDoWithReducer";
 import ContextStudy from "./components/ContextStudy";
 import PlayVideo from "./components/PlayVideo";
+import StudyCss from "./components/StudyCss";
 class App extends React.Component {
 
 	render() {
 		return (
 			<div className="app-container">
+				<StudyCss />
 				<PlayVideo />
 				<ContextStudy />
 				<ToDoWithReducer />
