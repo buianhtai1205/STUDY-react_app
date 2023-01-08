@@ -24,7 +24,7 @@ const Button = (props) => {
                 [Styles.info] : info ? true : false,
             })}
         >
-            Click
+            { props.name }
         </button>
     )
 }

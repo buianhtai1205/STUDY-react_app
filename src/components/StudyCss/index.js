@@ -7,13 +7,13 @@ const StudyCss = () => {
         <GlobalStyles>
             <div> 
                 <h1>Study CSS</h1>
-                <Button />
-                <Button primary />
-                <Button secondary/>
-                <Button success/>
-                <Button danger/>
-                <Button warning/>
-                <Button info/>
+                <Button name="click"/>
+                <Button primary name="primary"/>
+                <Button secondary name="secondary"/>
+                <Button success name="success"/>
+                <Button danger name="danger"/>
+                <Button warning name="warning"/>
+                <Button info name="info"/>
             </div> 
         </GlobalStyles>
     )
