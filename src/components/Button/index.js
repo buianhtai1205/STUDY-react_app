@@ -3,28 +3,18 @@ import Styles from './button.module.scss'
 
 const Button = (props) => {
 
-    const {
-        primary, 
-        secondary, 
-        success, 
-        danger, 
-        warning, 
-        info
-    } = props
-    console.log(secondary)
-
     return (
         <button 
             className={clsx(Styles.btn, {
-                [Styles.primary] : primary ? true : false,
-                [Styles.secondary] : secondary ? true : false,
-                [Styles.success] : success ? true : false,
-                [Styles.danger] : danger ? true : false,
-                [Styles.warning] : warning ? true : false,
-                [Styles.info] : info ? true : false,
+                [Styles.primary] : props?.primary,
+                [Styles.secondary] : props?.secondary,
+                [Styles.success] : props?.success,
+                [Styles.danger] : props?.danger,
+                [Styles.warning] : props?.warning,
+                [Styles.info] : props?.info,
             })}
         >
-            { props.name }
+            { props.text }
         </button>
     )
 }
